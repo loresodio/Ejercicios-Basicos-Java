@@ -1,0 +1,35 @@
+' Gambas class file
+
+
+Public Sub Button_Click()
+
+Dim num1 As Integer
+Dim num2 As Integer
+Dim num3 As Integer
+
+num1 = TextBox1.Text
+num2 = TextBox2.Text
+num3 = TextBox3.Text
+
+
+  If num1 >= num2 And num1 >= num3 And num2 >= num3 Then
+           Label2.Text = num1 & ", " & num2 & ", " & num3
+
+        Else If num1 >= num2 And num1 >= num3 And num2 <= num3 Then
+           Label2.Text = num1 & "," & num3 & "," & num2
+
+        Else If (num1 <= num2 And num2 >= num3 And num1 >= num3) Then
+            Label2.Text = num2 & "," & num1 & "," & num3
+
+        Else If (num1 <= num2 And num2 >= num3 And num1 <= num3) Then
+            Label2.Text = num2 & "," & num3 & "," & num1
+
+        Else If (num3 >= num2 And num3 >= num2 And num2 >= num1) Then
+            Label2.Text = num3 & "," & num2 & "," & num1
+
+        Else If (num3 >= num2 And num3 >= num2 And num2 <= num1) Then
+            Label2.Text = num3 & "," & num1 & "," & num2
+
+        Endif
+
+End
